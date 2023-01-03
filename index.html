@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- bringing in the js file in a script tag at the bottom -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -36,17 +37,30 @@
                 <ion-card-content>
                   <ion-item>
                     <ion-label position="floating">Expense Reason</ion-label>
-                    <ion-input type="text" placeholder="Enter text"></ion-input>
+                    <ion-input
+                      id="input-reason"
+                      type="text"
+                      placeholder="Enter text"
+                    ></ion-input>
                   </ion-item>
                   <ion-item>
                     <ion-label position="floating">Expense Amount</ion-label>
                     <ion-input
+                      id="input-amount"
                       type="number"
                       placeholder="Enter amount"
                     ></ion-input>
                   </ion-item>
-                  <ion-button fill="outline" color="danger"><ion-icon name="close" slot="icon-only" style="margin-right: 10px"></ion-icon>Clear</ion-button>
-                  <ion-button><ion-icon fill="outline"  name="add-outline" slot="icon-only" style="margin-right: 10px"></ion-icon>Add Expense</ion-button>
+                  <div class="ion-margin ion-text-right">
+                    <ion-button id="btn-cancel" fill="outline" color="danger" 
+                      ><ion-icon name="close" slot="start"></ion-icon
+                      >Clear</ion-button
+                    >
+                    <ion-button id="btn-confirm" fill="outline"
+                      ><ion-icon name="add-outline" slot="start"></ion-icon>Add
+                      Expense</ion-button
+                    >
+                  </div>
                 </ion-card-content>
               </ion-card>
             </ion-col>
@@ -54,5 +68,6 @@
         </ion-grid>
       </ion-content>
     </ion-app>
+    <script src="app.js"></script>
   </body>
 </html>
