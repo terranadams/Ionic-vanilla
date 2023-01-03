@@ -23,7 +23,15 @@ confirmBtn.addEventListener("click", () => {
     enteredAmount <= 0 ||
     enteredAmount.trim().length <= 0
   ) {
-    return;
+    const alert = document.createElement('ion-alert');
+    
+    alert.header = 'Invalid Input';
+    
+    alert.message = 'Please enter valid reason and amount';
+    alert.buttons = ['Oh.....ok'];
+  
+    document.body.appendChild(alert);
+    return alert.present(); // this stops the rest of the script from running, while also presenting custom error message
   }
   //   console.log(enteredReason, enteredAmount);
   const newItem = document.createElement("ion-item");
